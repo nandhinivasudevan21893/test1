@@ -1,0 +1,83 @@
+<!-- <div class="container container-fluid">
+<div class="panel panel-primary" *ngFor="let employee of employees">
+    <div class="panel-heading">
+        <h2 class="panel-title">{{employee.Name}}</h2>
+    </div>
+    <div class="panel-body">
+        <div class="col-xs-4">
+            <div class="row vertical-align">
+                <div class="col-xs-10">
+                    <img class="imageClass"[src]="employee.Photopath">
+                </div>
+                <div class="col-xs-8">
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Gender
+                        </div>
+                        <div class="col-xs-6">
+                            : {{employee.Gender}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Date of Birth
+                        </div>
+                        <div class="col-xs-6">
+                            : {{employee.Dateofbirth | date}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Department
+                        </div>
+                        <div class="col-xs-6">
+                            : {{employee.Department}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Email
+                        </div>
+                        <div class="col-xs-6">
+                            : {{employee.Email}}
+                        </div>
+                    </div><div class="row">
+                        <div class="col-xs-6">
+                            PhoneNumber
+                        </div>
+                        <div class="col-xs-6">
+                            : {{employee.Phonenumber}}
+                        </div>
+                    </div><div class="row">
+                        <div class="col-xs-6">
+                            IsActive
+                        </div>
+                        <div class="col-xs-6">
+                            : {{employee.IsActive}}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> -->
+<div class="container container-fluid">
+    <div class="holder d-flex justify-content-center" *ngFor="let employee of employees">
+        <div class="card" style="width: 18rem;">
+            <img [src]="employee.Photopath" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Name : {{ employee.Name }}</h5>
+              <p class="card-text">Gender : {{employee.Gender}}</p>
+              <p class="card-text">Email : {{employee.Email}}</p>
+              <p class="card-text">PhoneNumber : {{employee.Phonenumber}}</p>
+              <p class="card-text">Dateofbirth : {{employee.Dateofbirth | date}}</p>
+              <p class="card-text">Department : {{employee.Department}}</p>
+              <p class="card-text">IsActive : {{employee.IsActive}}</p>       
+            </div>
+          </div>
+    </div>
+</div>
+
